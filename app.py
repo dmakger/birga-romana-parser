@@ -1,5 +1,5 @@
-from config import URL_SBER
-from soup.soup import Parser
+from config import URL_MOEX
+from soup import Parser
 
 
 class App:
@@ -10,5 +10,6 @@ class App:
         self.get_parsing_data()
 
     def get_parsing_data(self):
-        Parser(URL_SBER).start()
-        pass
+        data = Parser(URL_MOEX).start()
+        for x in data:
+            print(x.body())

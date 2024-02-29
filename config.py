@@ -1,3 +1,1 @@
-# URL_SBER = "https://bcs.ru/markets/sber/tqbr"
-# URL_SBER = "https://alfaforex.ru/analytics/analytics-rates/usd/"
-URL_SBER = "https://www.moex.com/ru/issue.aspx?board=TQBR&code=MSNG"
+URL_MOEX = "https://www.moex.com/ru/marketdata/?g=4#/mode=groups&group=4&collection=3&boardgroup=57&data_type=current&category=main"
