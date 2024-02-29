@@ -1,0 +1,2 @@
+class TypeWEB:
+    BCS = 'BCS'
