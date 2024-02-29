@@ -29,8 +29,6 @@ class Parser:
         return scheme
 
     def get_page(self):
-        # url = 'http://terriblewebsite.com/'
-
         proxy = urllib2.ProxyHandler({'http': '130.0.89.75:8080'})
 
         # Create an URL opener utilizing proxy
