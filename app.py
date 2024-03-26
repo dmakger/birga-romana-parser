@@ -1,3 +1,4 @@
+from api import Api
 from config import URL_MOEX
 from soup import Parser
 
@@ -7,9 +8,13 @@ class App:
         self.body = []
 
     def start(self):
-        self.get_parsing_data()
+        parsing_data = self.get_parsing_data()
+        self.send_api(parsing_data)
 
     def get_parsing_data(self):
-        data = Parser(URL_MOEX).start()
-        for x in data:
-            print(x.body())
+        return Parser(URL_MOEX).start()
+
+    def send_api(self, data):
+        print('Сохранение на сервер')
+        Api().post_many('stock/smart-add/', data)
+        print('Успешно!')

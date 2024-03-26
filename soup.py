@@ -35,6 +35,7 @@ class Parser:
                 company = Company(title=cells[1].text.strip(), code=cells[0].text.strip())
                 stock = Stock(cost=cost)
                 objects.append(CompanyToStock(company, stock))
+        print('Успешно!')
         return objects
 
     def cell_to_float(self, cell) -> Optional[float]:
