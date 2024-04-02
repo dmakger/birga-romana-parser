@@ -27,6 +27,7 @@ class Parser:
             rows = soup.find_all('tr')
             for row in rows:
                 cells = row.find_all('td')
+                print(cells)
                 if len(cells) == 0:
                     continue
                 cost = self.cell_to_float(cells[2])
