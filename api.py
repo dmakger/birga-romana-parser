@@ -11,6 +11,7 @@ class Api:
 
     def post_many(self, url: str, data: list[_Model]):
         print(f"Всего компаний: {len(data)}")
+        print(data)
         for i in range(len(data)):
             self.post(url, data[i], i+1)
 
