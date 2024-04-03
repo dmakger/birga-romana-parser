@@ -11,12 +11,12 @@ class Api:
 
     def post_many(self, url: str, data: list[_Model]):
         print(f"Всего компаний: {len(data)}")
-        print(data)
         for i in range(len(data)):
             self.post(url, data[i], i+1)
 
     def post(self, url: str, data: _Model, num=None):
         _url = self.get_url(url)
+        print(data.body())
         response = requests.post(_url, json=data.body())
         self._show(response, num)
 
