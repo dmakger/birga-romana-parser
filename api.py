@@ -7,7 +7,7 @@ from models import _Model
 class Api:
     def __init__(self):
         # self.parent_url = 'http://localhost:8000/api'
-        self.parent_url = 'http://localhost:8000/api'
+        self.parent_url = 'http://api.birgaromana.ru/api'
 
     def post_many(self, url: str, data: list[_Model]):
         print(f"Всего компаний: {len(data)}")
