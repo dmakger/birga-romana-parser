@@ -5,6 +5,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.chrome.options import Options
 
 from models import Company, Stock, CompanyToStock
 
@@ -66,7 +67,9 @@ class Parser:
         # Пропускает пользовательское соглашение
 
     def get_browser(self):
-        browser = webdriver.Chrome()
+        options = Options()
+        options.add_argument("--window-size=1000,800")  # Установите размер окна браузера
+        browser = webdriver.Chrome(options=options)
         browser.get(self.url)
         self.skip_user_agreement(browser)
         return browser
